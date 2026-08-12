@@ -1,0 +1,14 @@
+[tools]
+bat = "latest"
+delta = "latest"
+eza = "latest"
+fzf = "latest"
+gh = "latest"
+ghq = "latest"
+neovim = "latest"
+node = "lts"
+pnpm = "latest"
+starship = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]
