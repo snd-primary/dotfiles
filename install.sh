@@ -9,6 +9,15 @@ XDG_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}"
 # "リポジトリ内のパス:リンク先" の対応表。追加する設定はここに1行足すだけ。
 LINKS=(
   "mise:$XDG_CONFIG/mise"
+  "ghostty:$XDG_CONFIG/ghostty"
+  "zsh/.zshrc:$HOME/.zshrc"
+  "zsh/.zprofile:$HOME/.zprofile"
+)
+
+# .zshrc が読み込む zsh プラグイン。~/.zsh 配下へ clone する（リポジトリには含めない）。
+ZSH_PLUGINS=(
+  "https://github.com/zsh-users/zsh-autosuggestions"
+  "https://github.com/zsh-users/zsh-syntax-highlighting"
 )
 
 link() {
@@ -37,6 +46,17 @@ link() {
 
 for entry in "${LINKS[@]}"; do
   link "${entry%%:*}" "${entry#*:}"
+done
+
+echo
+for url in "${ZSH_PLUGINS[@]}"; do
+  dest="$HOME/.zsh/$(basename "$url")"
+  if [ -d "$dest/.git" ]; then
+    echo "ok:   $dest"
+  else
+    mkdir -p "$HOME/.zsh"
+    git clone --depth 1 "$url" "$dest"
+  fi
 done
 
 if command -v mise >/dev/null 2>&1; then

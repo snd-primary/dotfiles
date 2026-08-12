@@ -1,0 +1,39 @@
+# Ghostty config
+# 設定一覧: ghostty +show-config --default --docs
+# テーマ一覧: ghostty +list-themes
+
+# ── テーマ ──────────────────────────────
+theme = Catppuccin Mocha
+
+# ライト/ダーク自動切り替えをしたい場合は上を消してこちら:
+# theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+# ── フォント ────────────────────────────
+font-size = 14
+font-family = "JetBrainsMono Nerd Font Mono"
+font-thicken = true
+
+# ── ウィンドウ ──────────────────────────
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+window-save-state = always
+macos-titlebar-style = tabs
+background-opacity = 0.8
+background-blur = 20
+
+# ── カーソル ────────────────────────────
+cursor-style = block
+cursor-style-blink = false
+
+# ── スクロール/その他 ───────────────────
+scrollback-limit = 10000000
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+confirm-close-surface = false
+
+# ── キーバインド ────────────────────────
+keybind = cmd+shift+left=goto_split:left
+keybind = cmd+shift+right=goto_split:right
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
