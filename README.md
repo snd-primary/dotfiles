@@ -10,6 +10,7 @@ macOS (Apple Silicon) 向けの個人設定。`~/.config` 配下へシンボリ�
 | `ghostty/` | `~/.config/ghostty` | Ghostty ターミナルの設定 |
 | `zsh/.zshrc` | `~/.zshrc` | 対話シェルの設定（mise / fzf / starship / ghq 連携、キーバインド） |
 | `zsh/.zprofile` | `~/.zprofile` | ログインシェルの設定（Homebrew の `shellenv`） |
+| `hammerspoon/` | `~/.hammerspoon` | Hammerspoon の設定（ウィンドウ配置のホットキー） |
 
 nvim の設定は別リポジトリ [`dotfiles-nvim`](https://github.com/snd-primary/dotfiles-nvim) にあり、`~/.config/nvim` へ直接リンクしている。
 

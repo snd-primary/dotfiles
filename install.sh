@@ -12,6 +12,7 @@ LINKS=(
   "ghostty:$XDG_CONFIG/ghostty"
   "zsh/.zshrc:$HOME/.zshrc"
   "zsh/.zprofile:$HOME/.zprofile"
+  "hammerspoon:$HOME/.hammerspoon"
 )
 
 # .zshrc が読み込む zsh プラグイン。~/.zsh 配下へ clone する（リポジトリには含めない）。
